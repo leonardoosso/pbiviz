@@ -1,0 +1,44 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "dbid",
+            "name": "dbid",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "reportID",
+            "name": "reportID",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "mainReportID",
+            "name": "mainReportID",
+            "kind": "Measure"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "dbid"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "reportID"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "mainReportID"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "id",
+            "name": "dbid",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "property",
+            "name": "property",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "urn",
+            "name": "urn",
+            "kind": "Grouping"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "dbid"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "property"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "urn"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+
+}

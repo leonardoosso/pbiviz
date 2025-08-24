@@ -1,0 +1,37 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "dbid",
+            "name": "dbid",
+            "kind": "Grouping"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "dbid"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "objects": {
+        "general": {
+            "displayName": "General",
+            "properties": {
+                "urn": {
+                    "displayName": "URN",
+                    "type": {
+                        "text": true
+                    }
+                }
+            }
+        }
+    }
+}
