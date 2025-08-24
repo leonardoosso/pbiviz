@@ -1,5 +1,6 @@
 module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A63B03  {
 
+    declare var ColorsExtension: any;
 
     "use strict";
     export class PowerBI_ForgeViewer_Visual implements IVisual {
@@ -36,6 +37,8 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
         private forge_viewer: Autodesk.Viewing.GuiViewer3D = null;
         private selectionMgr: ISelectionManager = null;
         private selectionIdBuilder: ISelectionIdBuilder = null;
+        private dbIdsAndColors: Array<{dbId: number, color: string}> = [];
+        private colorsExtension: any = null;
 
 
         constructor(options2: VisualConstructorOptions/*,options3: VisualUpdateOptions*/) {
@@ -134,6 +137,100 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
             console.log('documentId:' + documentId);
 
             Autodesk.Viewing.Initializer(options, () => {
+                console.log('Inside Autodesk.Viewing.Initializer callback');
+                
+                // Define and register ColorsExtension here where Autodesk is available
+                function ColorsExtension(viewer, options) {
+                    Autodesk.Viewing.Extension.call(this, viewer, options);
+                    this._button = null;
+                    this._customColorsApplied = false;
+                    this.dbIdsAndColors = [];
+                }
+                
+                ColorsExtension.prototype = Object.create(Autodesk.Viewing.Extension.prototype);
+                ColorsExtension.prototype.constructor = ColorsExtension;
+                
+                ColorsExtension.prototype.load = function() {
+                    console.log('ColorsExtension load method called');
+                    this.createColorButton();
+                    return true;
+                };
+                
+                ColorsExtension.prototype.unload = function() {
+                    if (this._button && this._button.parent) {
+                        this._button.parent.removeControl(this._button);
+                    }
+                    this.viewer.clearThemingColors();
+                    return true;
+                };
+                
+                ColorsExtension.prototype.createColorButton = function() {
+                    var self = this;
+                    var toolbar = this.viewer.toolbar;
+                    if (toolbar) {
+                        var modelTools = toolbar.getControl('modelTools');
+                        if (modelTools) {
+                            this._button = new Autodesk.Viewing.UI.Button('toggle-colors-button');
+                            this._button.icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="24">
+  <path d="M12 3 C7 3, 3 7, 3 12 C3 17, 7 21, 12 21 C13 21, 14 20, 14.5 18.8 C15 17.5, 16.5 17.5, 17.5 18 C18.5 18.5, 20 17, 20 15 C20 8, 17 3, 12 3Z" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <circle cx="9" cy="9" r="1.2" fill="#FFFFFF"/>
+  <circle cx="13" cy="8" r="1.2" fill="#FFFFFF"/>
+  <circle cx="16" cy="11" r="1.2" fill="#FFFFFF"/>
+  <circle cx="10" cy="13" r="1.2" fill="#FFFFFF"/>
+</svg>`;
+                            this._button.setToolTip('Toggle Colors');
+                            this._button.onClick = function() {
+                                self._customColorsApplied = !self._customColorsApplied;
+                                console.log('Color button clicked, custom colors:', self._customColorsApplied);
+                                if (self._customColorsApplied) {
+                                    self.applyCustomColors();
+                                } else {
+                                    self.applyDefaultColors();
+                                }
+                            };
+                            modelTools.addControl(this._button);
+                            console.log('Color button added to toolbar successfully');
+                        } else {
+                            console.error('modelTools not found');
+                        }
+                    } else {
+                        console.error('toolbar not found');
+                    }
+                };
+                
+                ColorsExtension.prototype.updateDbIdsAndColors = function(colorData) {
+                    this.dbIdsAndColors = colorData || [];
+                    console.log('Extension received color data:', this.dbIdsAndColors.length, 'items');
+                };
+                
+                ColorsExtension.prototype.applyCustomColors = function() {
+                    console.log('Applying custom colors to', this.dbIdsAndColors.length, 'elements');
+                    for (var i = 0; i < this.dbIdsAndColors.length; i++) {
+                        var item = this.dbIdsAndColors[i];
+                        if (item.color && item.dbId) {
+                            var color = this.hexToRgb(item.color);
+                            var themingColor = new THREE.Vector4(color.r, color.g, color.b, 1);
+                            this.viewer.setThemingColor(item.dbId, themingColor);
+                        }
+                    }
+                };
+                
+                ColorsExtension.prototype.applyDefaultColors = function() {
+                    console.log('Clearing custom colors, showing defaults');
+                    this.viewer.clearThemingColors();
+                };
+                
+                ColorsExtension.prototype.hexToRgb = function(hex) {
+                    var bigint = parseInt(hex.substring(1), 16);
+                    var r = (bigint >> 16) & 255;
+                    var g = (bigint >> 8) & 255;
+                    var b = bigint & 255;
+                    return { r: r / 255, g: g / 255, b: b / 255 };
+                };
+                
+                // Register the extension
+                Autodesk.Viewing.theExtensionManager.registerExtension('ColorsExtension', ColorsExtension);
+                console.log('ColorsExtension registered successfully');
                 this.forge_viewer = new Autodesk.Viewing.GuiViewer3D(viewerContainer)
                 this.forge_viewer.start();
                 Autodesk.Viewing.Document.load(documentId, (doc) => {
@@ -155,6 +252,18 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
                             //await this.loadMyAwesomeExtension();
                             //load built-in extensions of Forge.
                             //this.forge_viewer.loadExtension('Autodesk.DocumentBrowser');
+                            
+                            // Load ColorsExtension
+                            var self = this;
+                            this.forge_viewer.loadExtension('ColorsExtension').then((extension) => {
+                                console.log('ColorsExtension loaded successfully - storing reference and passing data');
+                                self.colorsExtension = extension as any;
+                                if (self.colorsExtension && self.colorsExtension.updateDbIdsAndColors) {
+                                    self.colorsExtension.updateDbIdsAndColors(self.dbIdsAndColors);
+                                }
+                            }).catch(err => {
+                                console.error('Failed to load ColorsExtension:', err);
+                            });
 
                             console.log('dumpping dbIds...');
                             this.forge_viewer.getObjectTree(tree => {
@@ -261,7 +370,7 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
 
             /////////
             debugger;
-            let reportIDCol, dbidCol, mainReportIDCol;
+            let reportIDCol, dbidCol, mainReportIDCol, colorCol;
 
             options.dataViews[0].table.columns.forEach((column, index) => {
                 if (column.roles.dbid) {
@@ -270,6 +379,9 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
                     reportIDCol = index;
                 } else if (column.roles.mainReportID) {
                     mainReportIDCol = index;
+                } else if (column.roles.highlightColor) {
+                    colorCol = index;
+                    console.log('Color column found at index:', index);
                 }
             });
 
@@ -332,6 +444,27 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
 
                 if (dbIds2 != null) {
                     debugger;
+                    
+                    // Process color data (only if color column exists)
+                    this.dbIdsAndColors = [];
+                    if (typeof colorCol !== 'undefined') {
+                        console.log('Processing color data...');
+                        this.dbIdsAndColors = dbIds2.map(row => {
+                            const dbId = Number(row[dbidCol]);
+                            const colorHex = row[colorCol] ? String(row[colorCol]) : null;
+                            return { dbId, color: colorHex };
+                        }).filter(item => item.dbId != null && item.color != null && item.color !== '');
+                        console.log('Color data processed:', this.dbIdsAndColors.length, 'items with colors');
+                        console.log('Sample color data:', this.dbIdsAndColors.slice(0, 5));
+                    } else {
+                        console.log('No color column found, skipping color processing');
+                    }
+                    
+                    // Update extension with new color data if it's already loaded
+                    if (this.colorsExtension && this.colorsExtension.updateDbIdsAndColors) {
+                        console.log('Updating existing extension with new color data:', this.dbIdsAndColors.length, 'items');
+                        this.colorsExtension.updateDbIdsAndColors(this.dbIdsAndColors);
+                    }
 
                     //when the viewer has not been initialized
                     if (!this.forge_viewer) {

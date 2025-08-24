@@ -112,6 +112,7 @@ nvm use 12 (si ya esta instalado)
 
 
 
+
 6. verificar se lleno en powerbi el urn, value and dbids
     the input must have same name: ["urn", "value", "entity_id"]
     urn as text
@@ -132,6 +133,39 @@ nvm use 12 (si ya esta instalado)
 
 6. https://localhost:8080/assets/status
 
+## Chrome Dev Setup for Advanced Debugging
+
+For enhanced debugging capabilities, install and use Chrome Dev with remote debugging:
+
+### Installation
+1. **Download Chrome Dev**: Get it from https://www.google.com/intl/es_us/chrome/dev/
+2. **Install**: Follow standard installation process
+
+### Running with Remote Debugging
+```bash
+# Launch Chrome Dev with remote debugging port
+/Applications/Google\ Chrome\ Dev.app/Contents/MacOS/Google\ Chrome\ Dev --remote-debugging-port=9222
+```
+
+### Debugging Workflow
+1. Start pbiviz development server:
+   ```bash
+   pbiviz start
+   ```
+2. Launch Chrome Dev with debugging:
+   ```bash
+   /Applications/Google\ Chrome\ Dev.app/Contents/MacOS/Google\ Chrome\ Dev --remote-debugging-port=9222
+   ```
+3. Navigate to https://localhost:8080 in Chrome Dev
+4. Open Developer Tools for enhanced debugging capabilities
+5. Access debugging interface at http://localhost:9222
+
+This setup provides advanced debugging features including:
+- Real-time console logs
+- Network monitoring
+- Performance profiling
+- Source map debugging
+
 6. open chrome dev tool to debug
 
 7.  poner los respecticos:
@@ -148,3 +182,22 @@ nvm use 12 (si ya esta instalado)
 https://playground.powerbi.com/
 
 https://app.powerbi.com/embedsetup
+
+
+For testing the color functionality, you can use any of these hex color codes:
+
+  Basic Colors:
+  - #FF0000 - Red
+  - #00FF00 - Green
+  - #0000FF - Blue
+  - #FFFF00 - Yellow
+  - #FF00FF - Magenta
+  - #00FFFF - Cyan
+
+  Popular Colors:
+  - #FF6B35 - Orange
+  - #9B59B6 - Purple
+  - #E74C3C - Bright Red
+  - #2ECC71 - Emerald Green
+  - #3498DB - Blue
+  - #F39C12 - Orange
