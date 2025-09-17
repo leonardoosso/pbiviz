@@ -46,7 +46,12 @@
                                 "in": "highlightColor"
                             }
                         }
-                    ]
+                    ],
+                    "dataReductionAlgorithm": {
+                        "window": {
+                            "count": 30000
+                        }
+                    }
                 }
             }
         }

@@ -1,0 +1,2984 @@
+[
+    {
+        "metadata": {
+            "columns": [
+                {
+                    "roles": {
+                        "dbid": true
+                    },
+                    "type": {
+                        "underlyingType": 260,
+                        "category": {},
+                        "primitiveType": 4,
+                        "extendedType": 260,
+                        "categoryString": {},
+                        "text": false,
+                        "numeric": true,
+                        "integer": true,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "format": "0",
+                    "displayName": "dbid",
+                    "queryName": "Pivot.dbid",
+                    "expr": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "Pivot",
+                            "variable": "p1",
+                            "kind": 0
+                        },
+                        "ref": "dbid",
+                        "kind": 2
+                    },
+                    "rolesIndex": {
+                        "dbid": [
+                            0
+                        ]
+                    },
+                    "index": 0,
+                    "identityExprs": [
+                        {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Pivot",
+                                "kind": 0
+                            },
+                            "ref": "dbid",
+                            "kind": 2
+                        }
+                    ]
+                },
+                {
+                    "roles": {
+                        "highlightColor": true
+                    },
+                    "type": {
+                        "underlyingType": 1,
+                        "category": {},
+                        "primitiveType": 1,
+                        "extendedType": 1,
+                        "categoryString": {},
+                        "text": true,
+                        "numeric": false,
+                        "integer": false,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "displayName": "Color estado",
+                    "queryName": "Pivot.Color estado",
+                    "expr": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "Pivot",
+                            "variable": "p1",
+                            "kind": 0
+                        },
+                        "ref": "Color estado",
+                        "kind": 2
+                    },
+                    "rolesIndex": {
+                        "highlightColor": [
+                            0
+                        ]
+                    },
+                    "index": 1,
+                    "identityExprs": [
+                        {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Pivot",
+                                "kind": 0
+                            },
+                            "ref": "Color estado",
+                            "kind": 2
+                        }
+                    ]
+                },
+                {
+                    "roles": {
+                        "reportID": true
+                    },
+                    "type": {
+                        "underlyingType": 1,
+                        "category": {},
+                        "primitiveType": 1,
+                        "extendedType": 1,
+                        "categoryString": {},
+                        "text": true,
+                        "numeric": false,
+                        "integer": false,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "displayName": "First reportID",
+                    "queryName": "Min(Pivot.reportID)",
+                    "expr": {
+                        "_kind": 4,
+                        "arg": {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Pivot",
+                                "variable": "p1",
+                                "kind": 0
+                            },
+                            "ref": "reportID",
+                            "kind": 2
+                        },
+                        "func": 3,
+                        "kind": 4
+                    },
+                    "rolesIndex": {
+                        "reportID": [
+                            0
+                        ]
+                    },
+                    "index": 2,
+                    "isMeasure": true
+                }
+            ],
+            "isDataFilterApplied": true
+        },
+        "table": {
+            "columns": [
+                {
+                    "roles": {
+                        "dbid": true
+                    },
+                    "type": {
+                        "underlyingType": 260,
+                        "category": {},
+                        "primitiveType": 4,
+                        "extendedType": 260,
+                        "categoryString": {},
+                        "text": false,
+                        "numeric": true,
+                        "integer": true,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "format": "0",
+                    "displayName": "dbid",
+                    "queryName": "Pivot.dbid",
+                    "expr": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "Pivot",
+                            "variable": "p1",
+                            "kind": 0
+                        },
+                        "ref": "dbid",
+                        "kind": 2
+                    },
+                    "rolesIndex": {
+                        "dbid": [
+                            0
+                        ]
+                    },
+                    "index": 0,
+                    "identityExprs": [
+                        {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Pivot",
+                                "kind": 0
+                            },
+                            "ref": "dbid",
+                            "kind": 2
+                        }
+                    ]
+                },
+                {
+                    "roles": {
+                        "highlightColor": true
+                    },
+                    "type": {
+                        "underlyingType": 1,
+                        "category": {},
+                        "primitiveType": 1,
+                        "extendedType": 1,
+                        "categoryString": {},
+                        "text": true,
+                        "numeric": false,
+                        "integer": false,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "displayName": "Color estado",
+                    "queryName": "Pivot.Color estado",
+                    "expr": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "Pivot",
+                            "variable": "p1",
+                            "kind": 0
+                        },
+                        "ref": "Color estado",
+                        "kind": 2
+                    },
+                    "rolesIndex": {
+                        "highlightColor": [
+                            0
+                        ]
+                    },
+                    "index": 1,
+                    "identityExprs": [
+                        {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Pivot",
+                                "kind": 0
+                            },
+                            "ref": "Color estado",
+                            "kind": 2
+                        }
+                    ]
+                },
+                {
+                    "roles": {
+                        "reportID": true
+                    },
+                    "type": {
+                        "underlyingType": 1,
+                        "category": {},
+                        "primitiveType": 1,
+                        "extendedType": 1,
+                        "categoryString": {},
+                        "text": true,
+                        "numeric": false,
+                        "integer": false,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "displayName": "First reportID",
+                    "queryName": "Min(Pivot.reportID)",
+                    "expr": {
+                        "_kind": 4,
+                        "arg": {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Pivot",
+                                "variable": "p1",
+                                "kind": 0
+                            },
+                            "ref": "reportID",
+                            "kind": 2
+                        },
+                        "func": 3,
+                        "kind": 4
+                    },
+                    "rolesIndex": {
+                        "reportID": [
+                            0
+                        ]
+                    },
+                    "index": 2,
+                    "isMeasure": true
+                }
+            ],
+            "identity": [
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6159,
+                                "valueEncoded": "6159L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6159}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 0
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6159,
+                                "typeEncodedValue": "6159L",
+                                "valueEncoded": "6159L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6159}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6167,
+                                "valueEncoded": "6167L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6167}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 1
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6167,
+                                "typeEncodedValue": "6167L",
+                                "valueEncoded": "6167L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6167}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6175,
+                                "valueEncoded": "6175L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6175}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 2
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6175,
+                                "typeEncodedValue": "6175L",
+                                "valueEncoded": "6175L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6175}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6183,
+                                "valueEncoded": "6183L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6183}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 3
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6183,
+                                "typeEncodedValue": "6183L",
+                                "valueEncoded": "6183L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6183}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6191,
+                                "valueEncoded": "6191L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6191}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 4
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6191,
+                                "typeEncodedValue": "6191L",
+                                "valueEncoded": "6191L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6191}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6199,
+                                "valueEncoded": "6199L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6199}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 5
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6199,
+                                "typeEncodedValue": "6199L",
+                                "valueEncoded": "6199L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6199}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6207,
+                                "valueEncoded": "6207L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6207}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 6
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6207,
+                                "typeEncodedValue": "6207L",
+                                "valueEncoded": "6207L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6207}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6215,
+                                "valueEncoded": "6215L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6215}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 7
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6215,
+                                "typeEncodedValue": "6215L",
+                                "valueEncoded": "6215L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6215}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6223,
+                                "valueEncoded": "6223L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6223}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 8
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6223,
+                                "typeEncodedValue": "6223L",
+                                "valueEncoded": "6223L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6223}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6231,
+                                "valueEncoded": "6231L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6231}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 9
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6231,
+                                "typeEncodedValue": "6231L",
+                                "valueEncoded": "6231L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6231}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6239,
+                                "valueEncoded": "6239L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6239}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 10
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6239,
+                                "typeEncodedValue": "6239L",
+                                "valueEncoded": "6239L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6239}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6247,
+                                "valueEncoded": "6247L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6247}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 11
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6247,
+                                "typeEncodedValue": "6247L",
+                                "valueEncoded": "6247L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6247}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6255,
+                                "valueEncoded": "6255L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6255}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 12
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6255,
+                                "typeEncodedValue": "6255L",
+                                "valueEncoded": "6255L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6255}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6263,
+                                "valueEncoded": "6263L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6263}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 13
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6263,
+                                "typeEncodedValue": "6263L",
+                                "valueEncoded": "6263L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6263}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                },
+                {
+                    "kind": 1,
+                    "_expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6271,
+                                "valueEncoded": "6271L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "_key": {
+                        "factoryMethod": {},
+                        "value": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6271}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                    },
+                    "serializeDataViewFromScrathTimes": 2,
+                    "opaqueIdentity": {
+                        "identityIndex": 14
+                    },
+                    "expr": {
+                        "_kind": 8,
+                        "left": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "dbid",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 260,
+                                    "category": {},
+                                    "primitiveType": 4,
+                                    "extendedType": 260,
+                                    "categoryString": {},
+                                    "text": false,
+                                    "numeric": true,
+                                    "integer": true,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": 6271,
+                                "typeEncodedValue": "6271L",
+                                "valueEncoded": "6271L",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "right": {
+                            "_kind": 13,
+                            "comparison": 0,
+                            "left": {
+                                "_kind": 2,
+                                "source": {
+                                    "_kind": 0,
+                                    "entity": "Pivot",
+                                    "kind": 0
+                                },
+                                "ref": "Color estado",
+                                "kind": 2
+                            },
+                            "right": {
+                                "_kind": 17,
+                                "type": {
+                                    "underlyingType": 1,
+                                    "category": {},
+                                    "primitiveType": 1,
+                                    "extendedType": 1,
+                                    "categoryString": {},
+                                    "text": true,
+                                    "numeric": false,
+                                    "integer": false,
+                                    "bool": false,
+                                    "dateTime": false,
+                                    "duration": false,
+                                    "binary": false,
+                                    "json": false,
+                                    "none": false
+                                },
+                                "value": "#e06666",
+                                "typeEncodedValue": "'#e06666'",
+                                "valueEncoded": "'#e06666'",
+                                "kind": 17
+                            },
+                            "kind": 13
+                        },
+                        "kind": 8
+                    },
+                    "key": "{\"and\":{\"l\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"dbid\"}},\"r\":{\"const\":{\"t\":4,\"v\":6271}}}},\"r\":{\"comp\":{\"k\":0,\"l\":{\"col\":{\"s\":{\"e\":\"Pivot\"},\"r\":\"Color estado\"}},\"r\":{\"const\":{\"t\":1,\"v\":\"#e06666\"}}}}}}"
+                }
+            ],
+            "identityFields": [
+                {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "Pivot",
+                        "kind": 0
+                    },
+                    "ref": "dbid",
+                    "kind": 2
+                },
+                {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "Pivot",
+                        "kind": 0
+                    },
+                    "ref": "Color estado",
+                    "kind": 2
+                }
+            ],
+            "rows": [
+                [
+                    6159,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6167,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6175,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6183,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6191,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6199,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6207,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6215,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6223,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6231,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6239,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6247,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6255,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6263,
+                    "#e06666",
+                    "1102393382627475457"
+                ],
+                [
+                    6271,
+                    "#e06666",
+                    "1102393382627475457"
+                ]
+            ]
+        },
+        "categorical": {},
+        "matrix": {},
+        "tree": {},
+        "single": {}
+    }
+]
