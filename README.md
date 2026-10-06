@@ -51,21 +51,33 @@ This repository demonstrates how to embed Forge Viewer inside Power BI report by
 
 ### Steps of building custom visual of Power BI
 
-1.	Follow the steps to [setup environment of PowerBI custom visual](https://powerbi.microsoft.com/en-us/developers/custom-visualization/). Note: install ***pbiviz 2.5.0***.  And install certification with the [help document](https://docs.microsoft.com/en-us/power-bi/developer/visuals/create-ssl-certificate). 
+1.	Follow the steps to [setup environment of PowerBI custom visual](https://powerbi.microsoft.com/en-us/developers/custom-visualization/).
 
-        npm i -g powerbi-visuals-tools@2.5.0
+2.	Follow [the tutorial](https://powerbi.microsoft.com/en-us/developers/custom-visualization/) to create a new project of custom visual and test/debug it in PowerBI.
 
-2.	Follow [the tutorial](https://powerbi.microsoft.com/en-us/developers/custom-visualization/) to create a new project of custom visual and test/debug it in PowerBI. 
+3.	Switch to the project directory and install dependencies:
 
-3. Ensure to [create an SSL certificate](https://docs.microsoft.com/en-us/power-bi/developer/visuals/create-ssl-certificate)
+        ```bash
+        # Install Node.js 12 (if not already installed)
+        nvm install 12
+        nvm use 12
 
-4.	Switch to the project [forgePowerbiView](./forgePowerbiView). Install the packages.
+        # Install all dependencies (includes powerbi-visuals-tools@2.5.0)
+        npm install
+        ```
+
+4. Ensure to [create an SSL certificate](https://docs.microsoft.com/en-us/power-bi/developer/visuals/create-ssl-certificate):
+
+        ```bash
+        npm run cert:create
+        npm run cert:install
+        ```
 
 5. Two functions of new version of Forge Viewer were not defined in the old version of @types/forge-viewer (< v7.10). If you are working with the old @types/forge-viewer, please manually append them in the code below. you can also replace the default ts file by [upated-forge-viewer-index.d.ts](./upated-forge-viewer-index.d.ts)
 
         ```node_modules/@types/forge-viewer/index.d.ts```
 
-If you work with latest version of @types/forge-viewer (say v7.31.0), the step of #5 is not required. 
+    If you work with latest version of @types/forge-viewer (say v7.31.0), this step is not required.
 
 6.	Prepare 2legged token for loading model in Forge Viewer
 
@@ -92,46 +104,33 @@ If you work with latest version of @types/forge-viewer (say v7.31.0), the step o
     });
     ```
 
-5.	build the project by the script below
+7.	Build the project:
+    ```bash
+    npm run package
     ```
-     pbiviz package
+
+    The distributed file ***PowerBI_ForgeViewer_Visual.pbiviz*** will be generated at the dist folder. Load the visual package in Power BI visuals box. Insert one instance, select dbid from fields. It will take some time for the custom visual to load the model in Viewer.
+
+    <p align="center"><img src="./help/package.png" width="800"></p>
+
+8. Verify PowerBI data field configuration:
+    - The input must have same name: ["urn", "value", "entity_id"]
+    - urn as text
+    - value as text
+    - dbids as whole number
+
+9.	For development/debug mode, run:
+    ```bash
+    npm run start
     ```
 
-The distributed file ***PowerBI_ForgeViewer_Visual.pbiviz** will be generated at [dist folder](./forgePowerbiView/dist). Load the visual package in Power BI visuals box. Insert one instance, select dbid from fields. It will take some time for the custom visual to load the model in Viewer.
-
- <p align="center"><img src="./help/package.png" width="800"></p>   
-
-6. verificar si powerbi-visuals-tools@2.5.0
-
-npm install -g powerbi-visuals-tools@2.5.0
-
-6.	 instal node.js version (https://github.com/nvm-sh/nvm#installing-and-updating)
-
-nvm install 12 
-nvm use 12 (si ya esta instalado)
-
-
-
-
-6. verificar se lleno en powerbi el urn, value and dbids
-    the input must have same name: ["urn", "value", "entity_id"]
-    urn as text
-    value as text
-    dbids as whole number
-
-6. pbiviz --create-cert   Create new localhost certificate
-    pbiviz --install-cert  Install localhost certificate
-
-6.	 Or, run the script below will start debug mode. Ensure the developer model is enabled with  your PowerBI account. Insert an instance of developer visual.  Select dbid from fields.. Similarly it will take some time for the custom visual to load the model in Viewer.
- ```
-     pbiviz start
-```
+    Ensure the developer mode is enabled with your PowerBI account. Insert an instance of developer visual. Select dbid from fields. Similarly it will take some time for the custom visual to load the model in Viewer.
 
  <p align="center"><img src="./help/devmode.png" width="400"></p>   
 
  <p align="center"><img src="./help/debug.png" width="800"></p>   
 
-6. https://localhost:8080/assets/status
+10. Development server status: https://localhost:8080/assets/status
 
 ## Chrome Dev Setup for Advanced Debugging
 
@@ -148,9 +147,9 @@ For enhanced debugging capabilities, install and use Chrome Dev with remote debu
 ```
 
 ### Debugging Workflow
-1. Start pbiviz development server:
+1. Start development server:
    ```bash
-   pbiviz start
+   npm run start
    ```
 2. Launch Chrome Dev with debugging:
    ```bash
@@ -166,17 +165,20 @@ This setup provides advanced debugging features including:
 - Performance profiling
 - Source map debugging
 
-6. open chrome dev tool to debug
+11. Open Chrome Dev tools to debug
 
-7.  poner los respecticos:
-    Entity_id objects_val: value y urn
+## PowerBI Visual Usage
 
-    
-7.	Insert a table visual, selecting all columns of the data.
-8.	Insert an instance of Pie Visual, selecting Material as , and Material count as value. 
-9.	Click one row of table view, the corresponding single objects in Forge Viewer will be isolated. Select a material in pie view, the corresponding group of objects in Forge Viewer will be isolated.
+12. Configure the visual fields:
+    - Entity_id
+    - objects_val: value
+    - urn
+
+13.	Insert a table visual, selecting all columns of the data.
+14.	Insert an instance of Pie Visual, selecting Material as Legend, and Material count as value.
+15.	Click one row of table view - the corresponding single objects in Forge Viewer will be isolated. Select a material in pie view - the corresponding group of objects in Forge Viewer will be isolated.
+
 <p align="center"><img src="./help/main.png" width="800"></p>
-10. Open browser >> developer console when you want to debug in code.
 
 
 https://playground.powerbi.com/

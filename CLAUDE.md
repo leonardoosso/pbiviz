@@ -8,24 +8,36 @@ This project implements a PowerBI custom visual that embeds Autodesk Forge Viewe
 
 ### Required Versions
 - **Node.js**: v12.22.12 (use `nvm use 12`)
-- **PowerBI Visual Tools**: v2.5.0
+- **PowerBI Visual Tools**: v2.5.0 (installed as local devDependency)
 - **npm**: v6.14.16
 
-### Development Commands
+### Initial Setup
 ```bash
 # Switch to correct Node version
 nvm use 12
 
+# Install all dependencies (includes powerbi-visuals-tools)
+npm install
+```
+
+### Development Commands
+All commands are run via npm scripts:
+
+```bash
 # Start development server
-pbiviz start
+npm run start
 
 # Build package
-pbiviz package
+npm run package
 
-# Create/install SSL certificates
-pbiviz --create-cert
-pbiviz --install-cert
+# Create SSL certificate
+npm run cert:create
+
+# Install SSL certificate
+npm run cert:install
 ```
+
+**Note**: PowerBI Visual Tools is installed locally in the project. No global installation needed.
 
 ### Development URLs
 - **Development Server**: https://localhost:8080
@@ -49,7 +61,7 @@ pbiviz --install-cert
    ```bash
    cd /path/to/project
    nvm use 12
-   pbiviz start
+   npm run start
    ```
 
 2. **Launch Chrome Dev with Remote Debugging**:
@@ -114,7 +126,7 @@ The visual requires a server endpoint for Forge token generation:
 ## Testing & Validation
 
 ### Development Testing
-1. Start development server with `pbiviz start`
+1. Start development server with `npm run start`
 2. Launch Chrome Dev with remote debugging
 3. Enable developer mode in PowerBI
 4. Configure test data with valid dbIds and hex colors
@@ -122,7 +134,7 @@ The visual requires a server endpoint for Forge token generation:
 6. Test color toggle functionality
 
 ### Production Validation
-1. Build package with `pbiviz package`
+1. Build package with `npm run package`
 2. Upload to PowerBI custom visuals
 3. Test with real BIM model data
 4. Validate performance with large datasets (30k+ elements)
@@ -154,6 +166,7 @@ The visual requires a server endpoint for Forge token generation:
 
 ---
 
-**Last Updated**: August 2025  
-**Implemented By**: Claude Code Assistant  
+**Last Updated**: December 2025
+**Implemented By**: Claude Code Assistant
 **Project Status**: Development Environment Ready
+**Setup**: Local dependency management with npm scripts

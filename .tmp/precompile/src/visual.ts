@@ -39,6 +39,9 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
         private selectionIdBuilder: ISelectionIdBuilder = null;
         private dbIdsAndColors: Array<{dbId: number, color: string}> = [];
         private colorsExtension: any = null;
+        private pendingDbIds: number[] = null;      // Store dbids until viewer ready
+        private isViewerReady: boolean = false;     // Track viewer state
+        private isViewerInitializing: boolean = false;  // Prevent multiple simultaneous initializations
 
 
         constructor(options2: VisualConstructorOptions/*,options3: VisualUpdateOptions*/) {
@@ -232,6 +235,7 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
                 Autodesk.Viewing.theExtensionManager.registerExtension('ColorsExtension', ColorsExtension);
                 console.log('ColorsExtension registered successfully');
                 this.forge_viewer = new Autodesk.Viewing.GuiViewer3D(viewerContainer)
+                this.isViewerInitializing = false;  // Reset flag - viewer object now exists
                 this.forge_viewer.start();
                 Autodesk.Viewing.Document.load(documentId, (doc) => {
 
@@ -247,6 +251,18 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
 
                             //GEOMETRY_LOADED_EVENT
                             console.log('GEOMETRY_LOADED_EVENT triggered!');
+
+                            // Mark viewer as ready
+                            this.isViewerReady = true;
+                            console.log('DEBUG: Viewer ready for operations');
+
+                            // Apply pending isolation if any
+                            if (this.pendingDbIds && this.pendingDbIds.length > 0) {
+                                console.log('DEBUG: Applying pending isolation for', this.pendingDbIds.length, 'dbids:', this.pendingDbIds);
+                                this.forge_viewer.showAll();
+                                this.forge_viewer.isolate(this.pendingDbIds);
+                                this.pendingDbIds = null; // Clear pending
+                            }
 
                             //load custom extension
                             //await this.loadMyAwesomeExtension();
@@ -355,15 +371,21 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
         };
 
         public update(options: VisualUpdateOptions) {
+            console.log('═══════════════════════════════════════');
+            console.log('UPDATE CALLED - Type:', options.type);
             debugger;
             let rows = options.dataViews[0].table.rows.length
+            console.log('DATA: rows =', rows);
 
             if (rows == 0) {
+                console.log('EXIT: No rows in data');
                 return
             }
 
             if (options.type == 4 || options.type == 36) //resizing or moving
                 return;
+
+            console.log('PASSED: Early exit checks');
 
 
             const dbIds2 = options.dataViews[0].table.rows;
@@ -375,13 +397,16 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
             options.dataViews[0].table.columns.forEach((column, index) => {
                 if (column.roles.dbid) {
                     dbidCol = index;
+                    console.log('COLUMN MAPPED: dbid at index', index);
                 } else if (column.roles.reportID) {
                     reportIDCol = index;
+                    console.log('COLUMN MAPPED: reportID at index', index);
                 } else if (column.roles.mainReportID) {
                     mainReportIDCol = index;
+                    console.log('COLUMN MAPPED: mainReportID at index', index);
                 } else if (column.roles.highlightColor) {
                     colorCol = index;
-                    console.log('Color column found at index:', index);
+                    console.log('COLUMN MAPPED: highlightColor at index', index);
                 }
             });
 
@@ -391,6 +416,11 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
             //let mainUrn = options.dataViews[0].table.rows[0][mainUrnCol]
             //let mainUrn = mainUrnCol !== undefined ? options.dataViews[0].table.rows[0][mainUrnCol] : null;
             let mainReportID = typeof mainReportIDCol !== 'undefined' ? options.dataViews[0].table.rows[0][mainReportIDCol] : null;
+
+            console.log('EXTRACTED VALUES:');
+            console.log('  reportID =', reportID);
+            console.log('  reportIDCol =', reportIDCol);
+            console.log('  dbidCol =', dbidCol);
 
             debugger;
             // If mainUrnCol was not found or is empty, handle it
@@ -440,7 +470,11 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
 
 
             // If mainUrnCol was not found or is empty, handle it
+            console.log('CHECK: reportID !== null && reportID !== "" ?',
+                reportID !== null && reportID !== '');
+
             if (reportID !== null && reportID !== '') {
+                console.log('ENTER: reportID block - will process model loading/isolation');
 
                 if (dbIds2 != null) {
                     debugger;
@@ -467,13 +501,16 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
                     }
 
                     //when the viewer has not been initialized
-                    if (!this.forge_viewer) {
+                    if (!this.forge_viewer && !this.isViewerInitializing) {
+                        console.log('DEBUG: Starting viewer initialization');
+                        this.isViewerInitializing = true;  // Set flag immediately to prevent multiple inits
+                        this.isViewerReady = false; // Reset ready state
                         //return;
                         //(typeof document !== "undefined") {
 
                         if (this.ACCESS_TOKEN != null) {
                             //hard-coded token, load the model directly
-                            //this.initializeViewer("forge-viewer"); 
+                            //this.initializeViewer("forge-viewer");
                             debugger;
                             console.log('options.dataViews[0] = ' + options.dataViews[0]);
                             this.initializeViewer(this.VIEWERURN);
@@ -485,19 +522,68 @@ module powerbi.extensibility.visual.forgePowerbiView4F623CD7FE44432EB2E71CF579A6
                         //}
 
 
+                    } else if (this.isViewerInitializing) {
+                        console.log('DEBUG: Viewer already initializing, skipping duplicate init');
+                    } else if (this.forge_viewer) {
+                        console.log('DEBUG: Viewer already exists, skipping init');
                     }
                 }
                 console.log('updating with VisualUpdateOptions')
+                console.log('DEBUG: Viewer state -', this.forge_viewer ? 'exists' : 'null', '| Ready:', this.isViewerReady);
                 debugger;
                 const dbIds = options.dataViews[0].table.rows.map(r =>
                     <number>r[dbidCol].valueOf());
                 debugger;
 
-                console.log('selected dbIds from powerbi: ' + dbIds)
-                this.forge_viewer.showAll();
-                this.forge_viewer.isolate(dbIds);
-            }
-        }
+                console.log('selected dbIds from powerbi:', dbIds);
+
+                // Diagnostic logging before isolation decision
+                console.log('DEBUG: About to check isolation condition');
+                console.log('  this.forge_viewer exists?', !!this.forge_viewer);
+                console.log('  this.isViewerReady?', this.isViewerReady);
+                console.log('  pendingDbIds:', this.pendingDbIds);
+
+                // Check if viewer is ready before isolating
+                if (this.forge_viewer && this.isViewerReady) {
+                    console.log('DEBUG: Viewer ready - isolating immediately');
+                    console.log('DEBUG: About to call showAll() and isolate()');
+                    console.log('DEBUG: dbIds to isolate:', dbIds);
+                    console.log('DEBUG: viewer.model exists?', !!this.forge_viewer.model);
+                    console.log('DEBUG: viewer.model.isLoadDone()?', this.forge_viewer.model && this.forge_viewer.model.isLoadDone());
+
+                    try {
+                        // Call showAll
+                        console.log('DEBUG: Calling showAll()...');
+                        this.forge_viewer.showAll();
+                        console.log('DEBUG: showAll() completed');
+
+                        // Verify dbIds exist in model
+                        if (this.forge_viewer.model) {
+                            const instanceTree = this.forge_viewer.model.getData().instanceTree;
+                            console.log('DEBUG: Checking if dbIds exist in model...');
+                            dbIds.forEach(dbId => {
+                                const exists = instanceTree.nodeAccess.dbIdToIndex[dbId] !== undefined;
+                                console.log(`DEBUG: dbId ${dbId} exists in model: ${exists}`);
+                            });
+                        }
+
+                        // Call isolate
+                        console.log('DEBUG: Calling isolate() with', dbIds.length, 'dbIds...');
+                        const result = this.forge_viewer.isolate(dbIds);
+                        console.log('DEBUG: isolate() returned:', result);
+                        console.log('DEBUG: isolate() completed successfully');
+
+                    } catch (error) {
+                        console.error('DEBUG: ERROR during isolation:', error);
+                        console.error('DEBUG: Error stack:', error.stack);
+                    }
+                } else {
+                    console.log('DEBUG: Viewer not ready - storing as pending');
+                    this.pendingDbIds = dbIds;
+                }
+        }  // Close reportID block
+        console.log('═══════════════════════════════════════');
+    }
 
         private static parseSettings(dataView: DataView): VisualSettings {
             return VisualSettings.parse(dataView) as VisualSettings;

@@ -1,12 +1,23 @@
 {
   "name": "powerbi_forgeviewer_visual",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
+  "scripts": {
+    "start": "pbiviz start",
+    "package": "pbiviz package",
+    "cert:create": "pbiviz --create-cert",
+    "cert:install": "pbiviz --install-cert"
+  },
   "dependencies": {
     "jquery": "^3.5.1",
     "powerbi-visuals-utils-dataviewutils": "1.2.0"
   },
   "devDependencies": {
     "@types/forge-viewer": "^7.31.0",
-    "@types/jquery": "^3.5.1",
-    "@types/node": "12.0.0"
+    "@types/jquery": "^2.0.48",
+    "@types/node": "12.0.0",
+    "powerbi-visuals-tools": "2.5.0"
   }
 }
